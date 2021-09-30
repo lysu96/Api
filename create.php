@@ -1,8 +1,9 @@
 <?php
 $requestMethod = $_SERVER["REQUEST_METHOD"];
-echo $requestMethod;
-require_once 'Rest.php';;
-$api = new Rest();
+// require_once 'Rest.php';;
+// $api = new Rest();
+require_once 'model/function-api.php';;
+$api = new Api();
 switch($requestMethod) {
 	case 'POST':	
 		$api->insertEmployee($_POST);
